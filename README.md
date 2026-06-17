@@ -10,11 +10,11 @@
 [![Firebase](https://img.shields.io/badge/Firebase-Firestore-yellow?style=flat-square&logo=firebase)](https://firebase.google.com)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
 
-<img width="384" height="220" alt="image" src="https://github.com/user-attachments/assets/4d0e8ad5-fd61-4da1-9e5d-cfae2c714633" />
+<img width="384"  alt="image" src="https://github.com/user-attachments/assets/4d0e8ad5-fd61-4da1-9e5d-cfae2c714633" />
 
-<img width="199" height="408" alt="image" src="https://github.com/user-attachments/assets/916fb861-7bbe-4840-ae6f-95427feb9cdd" />
+<img width="199"  alt="image" src="https://github.com/user-attachments/assets/916fb861-7bbe-4840-ae6f-95427feb9cdd" />
 
-<img width="456" height="272" alt="image" src="https://github.com/user-attachments/assets/41419e1e-23b7-4fe6-9e12-06cf9d43cb7d" />
+<img width="456"  alt="image" src="https://github.com/user-attachments/assets/41419e1e-23b7-4fe6-9e12-06cf9d43cb7d" />
 
 
 > A non-invasive, AI-driven mental wellness companion that detects depression risk from natural conversation using multimodal deep learning.
@@ -135,13 +135,12 @@ Training observations: Overfitting begins around epoch 5. Training loss converge
 | Low Risk | Moderate Risk | High Risk |
 |---|---|---|
 
-<img width="220" src="
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/78922957-ec16-4e0a-983d-6cbbde52b40e" />
-"/> | <img width="220" src="
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/ffa8810d-ec45-424b-b942-3936f4c111bf" />
-"/> | <img width="220" src="
-<img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 39 45 PM" src="https://github.com/user-attachments/assets/3f1798ed-e15a-427c-8ad0-e394e88d0136" />
-"/> |
+<img width="220"  alt="image" src="https://github.com/user-attachments/assets/78922957-ec16-4e0a-983d-6cbbde52b40e" />
+
+<img width="220" alt="image" src="https://github.com/user-attachments/assets/ffa8810d-ec45-424b-b942-3936f4c111bf" />
+
+<img width="220"  alt="WhatsApp Image 2026-06-17 at 2 39 45 PM" src="https://github.com/user-attachments/assets/3f1798ed-e15a-427c-8ad0-e394e88d0136" />
+
 
 
 🚨 Crisis Detection — Safety First
@@ -153,11 +152,11 @@ This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessi
 
 | Crisis Response | Emergency Contacts |
 |---|---|
-| <img width="300" src="
-<img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 39 01 PM" src="https://github.com/user-attachments/assets/210a9371-a2d5-4b75-96c9-b0c9d71e4c8f" />
-"/> | <img width="300" src="
-<img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 38 38 PM" src="https://github.com/user-attachments/assets/b7b39aa9-8bb7-40be-8379-d4ca945b1371" />
-"/> |
+
+<img width="220"  alt="WhatsApp Image 2026-06-17 at 2 39 01 PM" src="https://github.com/user-attachments/assets/210a9371-a2d5-4b75-96c9-b0c9d71e4c8f" />
+
+<img width="220" alt="WhatsApp Image 2026-06-17 at 2 38 38 PM" src="https://github.com/user-attachments/assets/b7b39aa9-8bb7-40be-8379-d4ca945b1371" />
+
 
 > User typed "i want to die" — Sentio immediately responded with human warmth and
 > surfaced Pakistan-specific helplines (Umang Helpline, Rozan Counseling, Emergency 1122)
