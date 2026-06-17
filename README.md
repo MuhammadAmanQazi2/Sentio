@@ -11,7 +11,9 @@
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
 
 <img width="384" height="220" alt="image" src="https://github.com/user-attachments/assets/4d0e8ad5-fd61-4da1-9e5d-cfae2c714633" />
+
 <img width="199" height="408" alt="image" src="https://github.com/user-attachments/assets/916fb861-7bbe-4840-ae6f-95427feb9cdd" />
+
 <img width="456" height="272" alt="image" src="https://github.com/user-attachments/assets/41419e1e-23b7-4fe6-9e12-06cf9d43cb7d" />
 
 
@@ -21,6 +23,7 @@ Department of Computer Science and Information Technology
 NED University of Engineering & Technology — Batch 2022–2026
 
 </div>
+
 
 
 
@@ -34,6 +37,7 @@ The system analyzes what users say (text) and how they say it (audio) using a cu
  👥 Team
 
 | Name | Roll No | Contribution |
+|---|---|---|
 | Ayan Adnan | DT-22014 | Audio sub-model, MFCC extraction, ANOVA feature selection, DAIC-WOZ preprocessing |
 | Syed Awais Waseem | DT-22033 | Frontend UI, dashboard visualizations, deployment |
 | Muhammad Aman Qazi | DT-22044 | Text model (DistilBERT/NLP pipeline), documentation |
@@ -158,7 +162,7 @@ This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessi
  Tech Stack
 
 | Layer | Technology | Purpose |
-
+|---|---|---|
 | Mobile Frontend | Capacitor 8 + Vanilla JS | Android hybrid app wrapper |
 | UI | HTML / CSS / Lucide Icons | Single-page app, dark mode |
 | PDF Export | jsPDF | Export chat history as PDF |
@@ -176,6 +180,7 @@ This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessi
 | Authentication | Firebase Auth | Email + Google Sign-In |
 | Deployment | Render.com | Backend cloud hosting |
 | Dataset | DAIC-WOZ (USC) | Clinical depression corpus (PHQ-8) |
+
 
 Project Structure
 
