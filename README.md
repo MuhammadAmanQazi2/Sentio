@@ -49,7 +49,7 @@ Group Number:CT-22045 | Batch: 2022–2026
 
  System Architecture
 
-
+```
 ┌─────────────────────────────────────────────────────────┐
 │                    ANDROID APP (Capacitor)               │
 │   Dashboard │ Chat │ Journal │ Activities │ To-Do        │
@@ -78,6 +78,7 @@ Group Number:CT-22045 | Batch: 2022–2026
 │              Firebase Firestore (NoSQL Database)         │
 │   Sessions │ Messages │ Risk Scores │ Crisis Logs        │
 └─────────────────────────────────────────────────────────┘
+```
 
 
 
@@ -117,6 +118,7 @@ Experimental Results
 Training and evaluation performed on the DAIC-WOZ dataset using Python, PyTorch, and scikit-learn.
 
 | Metric | Value |
+|---|---|
 | Validation MAE | ~4.4 |
 | Validation RMSE | ~5.4 |
 | Dev Pearson Correlation | ~0.25 |
@@ -130,15 +132,16 @@ Training observations: Overfitting begins around epoch 5. Training loss converge
 
 
  App Screenshots
-
-
-
 | Low Risk | Moderate Risk | High Risk |
+|---|---|---|
+| <img width="220" src="
 
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/78922957-ec16-4e0a-983d-6cbbde52b40e" />
+"/> | <img width="220" src="
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/ffa8810d-ec45-424b-b942-3936f4c111bf" />
+"/> | <img width="220" src="
 <img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 39 45 PM" src="https://github.com/user-attachments/assets/3f1798ed-e15a-427c-8ad0-e394e88d0136" />
-
+"/> |
 
 
 🚨 Crisis Detection — Safety First
@@ -147,11 +150,14 @@ When Sentio detects crisis language, it bypasses the LLM entirely and immediatel
 returns a handcrafted empathetic response along with localized emergency contacts.
 This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessing.
 
+
 | Crisis Response | Emergency Contacts |
-
+|---|---|
+| <img width="300" src="
 <img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 39 01 PM" src="https://github.com/user-attachments/assets/210a9371-a2d5-4b75-96c9-b0c9d71e4c8f" />
+"/> | <img width="300" src="
 <img width="738" height="1600" alt="WhatsApp Image 2026-06-17 at 2 38 38 PM" src="https://github.com/user-attachments/assets/b7b39aa9-8bb7-40be-8379-d4ca945b1371" />
-
+"/> |
 
 > User typed "i want to die" — Sentio immediately responded with human warmth and
 > surfaced Pakistan-specific helplines (Umang Helpline, Rozan Counseling, Emergency 1122)
@@ -182,54 +188,55 @@ This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessi
 | Dataset | DAIC-WOZ (USC) | Clinical depression corpus (PHQ-8) |
 
 
-Project Structure
 
+ Project Structure
+
+```
 sentio/
 ├── sentio_backend/
-│   ├── main.py                    # FastAPI entry point, CORS, routers
+│   ├── main.py                     # FastAPI entry point, CORS, routers
 │   ├── requirements.txt
 │   ├── api/
-│   │   ├── chat.py                # POST /chat, POST /transcribe
-│   │   └── sessions.py            # Session CRUD endpoints
+│   │   ├── chat.py                 # POST /chat, POST /transcribe
+│   │   └── sessions.py             # Session CRUD endpoints
 │   ├── chatbot/
-│   │   ├── llm_interface.py       # Abstract LLM base class
-│   │   ├── api_llm.py             # Groq/OpenAI-compatible adapter
-│   │   ├── prompt_builder.py      # Dynamic system prompt by risk level
-│   │   └── safety_filter.py      # Strip markdown, forbidden phrases
+│   │   ├── llm_interface.py        # Abstract LLM base class
+│   │   ├── api_llm.py              # Groq/OpenAI-compatible adapter
+│   │   ├── prompt_builder.py       # Dynamic system prompt by risk level
+│   │   └── safety_filter.py        # Strip markdown, forbidden phrases
 │   ├── core/
-│   │   ├── config.py              # Pydantic settings (env vars)
-│   │   └── crisis_detection.py   # Regex crisis patterns + hotlines
+│   │   ├── config.py               # Pydantic settings (env vars)
+│   │   └── crisis_detection.py     # Regex crisis patterns + hotlines
 │   ├── models/
-│   │   └── depression_model.py   # PyTorch FusionModel (BERT + MFCC)
+│   │   └── depression_model.py     # PyTorch FusionModel (BERT + MFCC)
 │   ├── services/
-│   │   ├── chat_service.py        # Orchestrates engine + DB write
-│   │   ├── rule_engine.py         # 7-step message pipeline
-│   │   ├── context_builder.py    # Conversation memory (deque)
-│   │   ├── risk_adapter.py        # float score → LOW/MODERATE/HIGH
-│   │   └── score_manager.py      # Heuristic + background ML scoring
+│   │   ├── chat_service.py         # Orchestrates engine + DB write
+│   │   ├── rule_engine.py          # 7-step message pipeline
+│   │   ├── context_builder.py      # Conversation memory (deque)
+│   │   ├── risk_adapter.py         # float score → LOW/MODERATE/HIGH
+│   │   └── score_manager.py        # Heuristic + background ML scoring
 │   ├── database/
-│   │   └── firestore_client.py   # Firebase Admin SDK wrapper
+│   │   └── firestore_client.py     # Firebase Admin SDK wrapper
 │   └── config/
-│       └── sentio_boundaries.json # Identity rules, forbidden phrases, crisis contacts
+│       └── sentio_boundaries.json  # Identity rules, forbidden phrases, crisis contacts
 └── sentio_frontend/
     ├── www/
-    │   ├── index.html             # Single HTML, all screens
-    │   ├── app.js                 # All JS (~3000 lines), SPA navigation
-    │   └── style.css              # Dark mode, chat bubbles, animations
-    ├── android/                   # Capacitor Android project
-    └── package.json               # Capacitor plugins
-
-
+    │   ├── index.html              # Single HTML, all screens
+    │   ├── app.js                  # All JS (~3000 lines), SPA navigation
+    │   └── style.css               # Dark mode, chat bubbles, animations
+    ├── android/                    # Capacitor Android project
+    └── package.json                # Capacitor plugins
+``` 
 
 
  Safety & Ethics
 
--Not a diagnostic tool — Sentio provides emotional awareness and support, not clinical diagnosis.
--Crisis detection uses 17 compiled regex patterns for suicidal/self-harm language. When triggered, the LLM is bypassed entirely and localized crisis hotlines are returned immediately.
--PHQ-8 aligned — risk thresholds (LOW / MODERATE / HIGH) map conceptually to PHQ-8 severity ranges.
--Data privacy — only extracted features are stored; raw audio is never persisted.
--UN SDG 3 — Good Health and Well-being.
--Plagiarism: 15% overall similarity (Turnitin) — within acceptable academic limits.
+- Not a diagnostic tool — Sentio provides emotional awareness and support, not clinical diagnosis.
+- Crisis detection uses 17 compiled regex patterns for suicidal/self-harm language. When triggered, the LLM is bypassed entirely and localized crisis hotlines are returned immediately.
+- PHQ-8 aligned — risk thresholds (LOW / MODERATE / HIGH) map conceptually to PHQ-8 severity ranges.
+- Data privacy — only extracted features are stored; raw audio is never persisted.
+- UN SDG 3 — Good Health and Well-being.
+- Plagiarism: 15% overall similarity (Turnitin) — within acceptable academic limits.
 
 
 
