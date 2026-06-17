@@ -193,31 +193,31 @@ This is deterministic — 17 compiled regex patterns, ~100% recall, no AI guessi
 ```
 sentio/
 ├── sentio_backend/
-│   ├── main.py                     # FastAPI entry point, CORS, routers
+│   ├── main.py                      FastAPI entry point, CORS, routers
 │   ├── requirements.txt
 │   ├── api/
-│   │   ├── chat.py                 # POST /chat, POST /transcribe
-│   │   └── sessions.py             # Session CRUD endpoints
+│   │   ├── chat.py                  POST /chat, POST /transcribe
+│   │   └── sessions.py              Session CRUD endpoints
 │   ├── chatbot/
-│   │   ├── llm_interface.py        # Abstract LLM base class
-│   │   ├── api_llm.py              # Groq/OpenAI-compatible adapter
-│   │   ├── prompt_builder.py       # Dynamic system prompt by risk level
-│   │   └── safety_filter.py        # Strip markdown, forbidden phrases
+│   │   ├── llm_interface.py         Abstract LLM base class
+│   │   ├── api_llm.py               Groq/OpenAI-compatible adapter
+│   │   ├── prompt_builder.py        Dynamic system prompt by risk level
+│   │   └── safety_filter.py         Strip markdown, forbidden phrases
 │   ├── core/
-│   │   ├── config.py               # Pydantic settings (env vars)
-│   │   └── crisis_detection.py     # Regex crisis patterns + hotlines
+│   │   ├── config.py                Pydantic settings (env vars)
+│   │   └── crisis_detection.py      Regex crisis patterns + hotlines
 │   ├── models/
-│   │   └── depression_model.py     # PyTorch FusionModel (BERT + MFCC)
+│   │   └── depression_model.py      PyTorch FusionModel (BERT + MFCC)
 │   ├── services/
-│   │   ├── chat_service.py         # Orchestrates engine + DB write
-│   │   ├── rule_engine.py          # 7-step message pipeline
-│   │   ├── context_builder.py      # Conversation memory (deque)
-│   │   ├── risk_adapter.py         # float score → LOW/MODERATE/HIGH
-│   │   └── score_manager.py        # Heuristic + background ML scoring
+│   │   ├── chat_service.py          Orchestrates engine + DB write
+│   │   ├── rule_engine.py           7-step message pipeline
+│   │   ├── context_builder.py       Conversation memory (deque)
+│   │   ├── risk_adapter.py          float score → LOW/MODERATE/HIGH
+│   │   └── score_manager.py         Heuristic + background ML scoring
 │   ├── database/
-│   │   └── firestore_client.py     # Firebase Admin SDK wrapper
+│   │   └── firestore_client.py      Firebase Admin SDK wrapper
 │   └── config/
-│       └── sentio_boundaries.json  # Identity rules, forbidden phrases, crisis contacts
+│       └── sentio_boundaries.json   Identity rules, forbidden phrases, crisis contacts
 └── sentio_frontend/
     ├── www/
     │   ├── index.html              # Single HTML, all screens
