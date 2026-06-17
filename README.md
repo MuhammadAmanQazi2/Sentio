@@ -134,8 +134,8 @@ Training observations: Overfitting begins around epoch 5. Training loss converge
  App Screenshots
 | Low Risk | Moderate Risk | High Risk |
 |---|---|---|
-| <img width="220" src="
 
+<img width="220" src="
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/78922957-ec16-4e0a-983d-6cbbde52b40e" />
 "/> | <img width="220" src="
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/ffa8810d-ec45-424b-b942-3936f4c111bf" />
