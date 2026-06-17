@@ -3,6 +3,13 @@
  Sentio
  AI-Powered App for Early Screening of Depression using Text and Audio
 
+[![NED University](https://img.shields.io/badge/NED%20University-2022--2026-blue?style=flat-square)](https://neduet.edu.pk)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square&logo=python)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-async-green?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orange?style=flat-square&logo=pytorch)](https://pytorch.org)
+[![Firebase](https://img.shields.io/badge/Firebase-Firestore-yellow?style=flat-square&logo=firebase)](https://firebase.google.com)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
+
 <img width="384" height="220" alt="image" src="https://github.com/user-attachments/assets/4d0e8ad5-fd61-4da1-9e5d-cfae2c714633" />
 <img width="199" height="408" alt="image" src="https://github.com/user-attachments/assets/916fb861-7bbe-4840-ae6f-95427feb9cdd" />
 <img width="456" height="272" alt="image" src="https://github.com/user-attachments/assets/41419e1e-23b7-4fe6-9e12-06cf9d43cb7d" />
@@ -19,7 +26,7 @@ NED University of Engineering & Technology — Batch 2022–2026
 
  What is Sentio?
 
-Depression affects approximately **332 million people worldwide** — yet most cases go undetected until symptoms significantly impact daily life. Sentio is an AI-powered Android application that enables early, non-invasive screening of depression risk through natural text and voice conversations.
+Depression affects approximately 332 million people worldwide — yet most cases go undetected until symptoms significantly impact daily life. Sentio is an AI-powered Android application that enables early, non-invasive screening of depression risk through natural text and voice conversations.
 
 The system analyzes what users say (text) and how they say it (audio) using a custom-trained multimodal deep learning fusion model, then calibrates an empathetic LLM-powered chatbot response to the user's detected emotional risk level. It is not a diagnostic tool — it is an awareness and support platform.
 
@@ -27,7 +34,6 @@ The system analyzes what users say (text) and how they say it (audio) using a cu
  👥 Team
 
 | Name | Roll No | Contribution |
-
 | Ayan Adnan | DT-22014 | Audio sub-model, MFCC extraction, ANOVA feature selection, DAIC-WOZ preprocessing |
 | Syed Awais Waseem | DT-22033 | Frontend UI, dashboard visualizations, deployment |
 | Muhammad Aman Qazi | DT-22044 | Text model (DistilBERT/NLP pipeline), documentation |
@@ -39,7 +45,7 @@ Group Number:CT-22045 | Batch: 2022–2026
 
  System Architecture
 
-```
+
 ┌─────────────────────────────────────────────────────────┐
 │                    ANDROID APP (Capacitor)               │
 │   Dashboard │ Chat │ Journal │ Activities │ To-Do        │
@@ -68,7 +74,7 @@ Group Number:CT-22045 | Batch: 2022–2026
 │              Firebase Firestore (NoSQL Database)         │
 │   Sessions │ Messages │ Risk Scores │ Crisis Logs        │
 └─────────────────────────────────────────────────────────┘
-```
+
 
 
 
@@ -81,7 +87,7 @@ Rule-based scoring from clinically informed keyword sets. HIGH keywords (hopeles
 
 Layer 2 — Custom Deep Learning FusionModel (Background, every 5th message)
 
-Trained on the **DAIC-WOZ dataset** (Distress Analysis Interview Corpus — Wizard of Oz, USC) with PHQ-8 depression labels.
+Trained on the DAIC-WOZ dataset (Distress Analysis Interview Corpus — Wizard of Oz, USC) with PHQ-8 depression labels.
 
 ```
 Text Input ──▶ MiniLM (all-MiniLM-L6-v2) ──▶ 384d ──▶ Linear ──▶ 256d ──▶ 512d ──┐
@@ -98,7 +104,7 @@ Training config:Adam optimizer, Binary Cross-Entropy loss, Dropout regularizatio
 Blending: `score = 0.7 × ML score + 0.3 × heuristic` after first ML run.
 
 Layer 3 — LLaMA 3 via Groq API (Response Generation)
-The LLM is used **only** for generating empathetic conversational responses — not for scoring. The system prompt is dynamically constructed based on the current risk tier, enforcing tone, sentence limits, and safety boundaries defined in `sentio_boundaries.json`.
+The LLM is used only for generating empathetic conversational responses — not for scoring. The system prompt is dynamically constructed based on the current risk tier, enforcing tone, sentence limits, and safety boundaries defined in `sentio_boundaries.json`.
 
 
 
@@ -107,7 +113,6 @@ Experimental Results
 Training and evaluation performed on the DAIC-WOZ dataset using Python, PyTorch, and scikit-learn.
 
 | Metric | Value |
-
 | Validation MAE | ~4.4 |
 | Validation RMSE | ~5.4 |
 | Dev Pearson Correlation | ~0.25 |
@@ -208,7 +213,7 @@ sentio/
     │   └── style.css              # Dark mode, chat bubbles, animations
     ├── android/                   # Capacitor Android project
     └── package.json               # Capacitor plugins
-```
+
 
 
 
@@ -240,7 +245,7 @@ MIT License
 
 <div align="center">
 
-Made with ❤️ at NED University of Engineering & Technology, Karachi — June 2026
+Made at NED University of Engineering & Technology, Karachi — June 2026
 
 "Sentio is a positive step towards using AI for social benefit in the area of mental health."
 
